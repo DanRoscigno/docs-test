@@ -55,9 +55,9 @@ jobs:
         # Extract GitHub org/user
         REPO="${{ github.repository }}"
         GIT_USERNAME=${REPO%/*}
-        # Set git user to danroscigno, if it's a push to a danroscigno repo
-        if [ "$GIT_USERNAME" == "danroscigno" ] && [ "${{github.event_name }}" == "push" ]
-        then GIT_USERNAME="danroscigno"
+        # Set git user to DanRoscigno, if it's a push to a DanRoscigno repo
+        if [ "$GIT_USERNAME" == "DanRoscigno" ] && [ "${{github.event_name }}" == "push" ]
+        then GIT_USERNAME="DanRoscigno"
         # Configure git client
         echo "Git repo - $REPO"
         echo "Git user - $GIT_USERNAME"
