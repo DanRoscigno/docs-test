@@ -66,12 +66,5 @@ jobs:
         git config --global user.name "$GIT_USERNAME"
         echo "machine github.com login $GIT_USERNAME password $GITHUB_TOKEN" > ~/.netrc
         # Run docusaurus-publish
-        GIT_USER=$GIT_USERNAME yarn --cwd docs publish-gh-pages
-# Failing in many situations (ie when a PR comes from a local branch); needs more work and testing before enabling it.
-#     - name: Create comment
-#       if: github.event_name == 'pull_request'
-#       uses: peter-evans/create-or-update-comment@v1
-#       with:
-#         token: ${{ secrets.GITHUB_TOKEN }}
-#         issue-number: ${{ github.event.number }}
-#         body: Website [preview is available](https://${{ github.actor }}.github.io/${{ env.REPO_NAME }})
+        GIT_USER=$GIT_USERNAME
+        yarn --cwd docs publish-gh-pages
