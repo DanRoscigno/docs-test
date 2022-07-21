@@ -34,7 +34,7 @@ URL="'\/https:\/\/${USER_NAME}.github.io\/$REPO_NAME',"
 
 sed -i "s/baseUrl:.*/baseUrl: $BASE_URL/" $DOCUSAURUS_CONFIG
 
-docusaurus.config.js
+# docusaurus.config.js
 sed -i "s/url:.*/url: $URL/" $DOCUSAURUS_CONFIG
 
 USER_NAME="'${USER_NAME}',"
